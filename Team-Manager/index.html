@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/team.css">
+  <link rel="stylesheet" type="text/css" href="css/details.css">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="../node_modules/sammy/lib/min/sammy-0.7.6.min.js"></script>
+
+  <script defer src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+
+  <script>
+    //Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCWly_MgLjFZ4Ds6feAtziyBYy9D7ekMV4",
+      authDomain: "routingsoftuni.firebaseapp.com",
+      databaseURL: "https://routingsoftuni.firebaseio.com",
+      projectId: "routingsoftuni",
+      storageBucket: "routingsoftuni.appspot.com",
+      messagingSenderId: "1024442115672",
+      appId: "1:1024442115672:web:a75c9bf2254c25e180cc2d"
+    };
+    // Initializing Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script type="module" src="scripts/app.js"></script>
+  <title>Team Managers App</title>
+</head>
+
+<body>
+  <div id="infoBox" class="notification" disabled></div>
+  <div id="errorBox" class="notification" disabled></div>
+  <div id="main">
+
+  </div>
+</body>
+
+</html>
