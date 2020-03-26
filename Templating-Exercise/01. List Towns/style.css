@@ -28,7 +28,7 @@ body {
 }
 
 input[type="text"] {
-    border: none;
+    border: 1px gray;
     border-radius: 5rem;
     width: 25rem;
     height: 3rem;

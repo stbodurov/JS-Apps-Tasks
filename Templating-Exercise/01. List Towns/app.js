@@ -1,26 +1,33 @@
 (() => {
     const elements = {
-        
+
         loadBtn: document.querySelector('#btnLoadTowns'),
-        countriesWrapper: document.querySelector('#root')
+        townInput: document.querySelector('#towns'),
+        townWrapper: document.querySelector('#root')
     }
 
-    elements.loadBtn.addEventListener('click', () => {
+    elements.loadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (elements.townInput.value.trim() === '') {
+            alert('You have not entered any towns.')
+            return;
+        }
 
-        Promise.all([
-                fetch().then(r => r.json()),
-                fetch('./template.hbs').then(r => r.text())
-            ])
-            .then(([countries, templateHbs]) => {
+        let towns = elements.townInput.value.split(',').map(x => x.trim());
+        
+        fetch('./template.hbs').then(r => r.text())
+            .then((templateHbs) => {
 
                 const template = Handlebars.compile(templateHbs);
 
                 const resultHTML = template({
-                    countries
+                    towns
                 });
 
-                elements.countriesWrapper.innerHTML = resultHTML;
+                elements.townWrapper.innerHTML = resultHTML;
             });
+
+            elements.townInput.value = '';
 
     });
 })();
