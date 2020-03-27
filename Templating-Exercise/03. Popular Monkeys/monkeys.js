@@ -3,7 +3,7 @@ export const monkeys = [
     id: 1,
     name: "Chim Chim",
     image: "./images/chim-chim.jpg",
-    info: "Chim Chim and Speed Racer's kid brother Spritle provide the comic relief on this classic cartoon. Their relationship is a strong (if not a little bizarre) one; they're essentially joined at the hip, and they consistently rock matching outfits as they plot new, wacky ways to get their hands on some candy."
+    info: "Chim Chim and Speed Racer's kid brother Spritle provide the comic relief on this classic cartoon. Their relationship is a strong (if not a little bizarre) one; they're essentially joined at the hip, and they consistently rock matching outfits as they plot new, wacky ways to get their hands on some candy." 
   },
   {
     id: 2,
